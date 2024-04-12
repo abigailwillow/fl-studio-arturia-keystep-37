@@ -20,4 +20,6 @@ def OnControlChange(event):
     elif event.data1 == BUTTON_PLAY and event.data2 > 0:
         print(f'{"Paused" if transport.isPlaying() else "Started"} playback')
         transport.start()
+    else:
+        return
     event.handled = True
